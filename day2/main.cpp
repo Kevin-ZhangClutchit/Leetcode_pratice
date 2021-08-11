@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
@@ -42,6 +43,16 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         return;
     }
 }
+static bool compare (const int &a, const int &b){
+    if (b==0){return true;}
+    else {return false;}
+}
+
+void moveZeroes(vector<int>& nums) {
+    std::stable_sort(nums.begin(),nums.end(),compare);
+}
+
+
 
 int main() {
     vector<int> test;
@@ -62,6 +73,18 @@ int main() {
     nums2.emplace_back(1);
     merge(nums1,1,nums2,1);
     for (int i : nums1) {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    vector<int> test2;
+    test2.emplace_back(0);
+    test2.emplace_back(1);
+    test2.emplace_back(0);
+    test2.emplace_back(3);
+    test2.emplace_back(12);
+    moveZeroes(test2);
+    for (int i : test2) {
         cout<<i<<" ";
     }
     cout<<endl;
