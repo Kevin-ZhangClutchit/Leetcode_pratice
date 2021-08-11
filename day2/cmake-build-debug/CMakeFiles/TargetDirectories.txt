@@ -1,3 +1,0 @@
-D:/University/leetcode/Leetcode_pratice/day2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/University/leetcode/Leetcode_pratice/day2/cmake-build-debug/CMakeFiles/day2.dir
-D:/University/leetcode/Leetcode_pratice/day2/cmake-build-debug/CMakeFiles/edit_cache.dir
