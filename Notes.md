@@ -44,3 +44,20 @@ It some how likes a merge sort with specialized comparison requirements to make 
 
 std::stable_sort is like merge sort provided by cpp17 and rewrite the comp to meet the requirements (rewrite of comp practice in VE281 ww)
 
+#### Day3
+
+##### #350
+
+Hashtable
+
+First, to save memory as Hashtable is quite space consuming. We store the one with smaller size to the hash table. In the hashtable, <key,value> is like <number,frequency>, the first time we insert one number, we set the value to one, other times we increase it.
+
+Then traversal the other vector, and update the frequency and push the one exists in both vectors to the answer vector.
+
+#121
+
+Dynamic Programming
+
+maintain two store variables: (1) max profit in the previous days (2) minimum buying prices in the previous days
+
+Each time, first updates (2) and then compare (sell today - (2)) with (1) and updates (1) if necessary.
