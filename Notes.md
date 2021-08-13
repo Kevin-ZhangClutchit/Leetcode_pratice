@@ -61,3 +61,23 @@ Dynamic Programming
 maintain two store variables: (1) max profit in the previous days (2) minimum buying prices in the previous days
 
 Each time, first updates (2) and then compare (sell today - (2)) with (1) and updates (1) if necessary.
+
+#### Day4
+
+##### #566
+
+Treat the matrix as an array then arrange the array into m\*n and r\*c matrixs
+
+##### #118
+
+Dynamic Programming
+
+store the before rows result and what we need to do is like fib that we add the left and right predecessor of current position.
+
+##### #1170
+
+How to calculate frequency: utilize the sort function provided by cpp STL which is also available for string then count the first n (duplicate) elements number.
+
+The process of searching is like counting sort. We first traversal the words vector to count how many words are of certain frequencies and then based on counting sort, we set the counting vector to be the number of words with frequency less or equal to given frequency. To transfer it to words with f(queries[i])<f(w), we just need to calculate (words.size()-current value).
+
+Note 11 in my code is to ensure that 1-10 (length limitations given by the problem description) frequency can be reached when traversal and without index issues.
