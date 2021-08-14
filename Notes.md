@@ -81,3 +81,40 @@ How to calculate frequency: utilize the sort function provided by cpp STL which 
 The process of searching is like counting sort. We first traversal the words vector to count how many words are of certain frequencies and then based on counting sort, we set the counting vector to be the number of words with frequency less or equal to given frequency. To transfer it to words with f(queries[i])<f(w), we just need to calculate (words.size()-current value).
 
 Note 11 in my code is to ensure that 1-10 (length limitations given by the problem description) frequency can be reached when traversal and without index issues.
+
+#### Day5
+
+##### #36
+
+Dynamic Programming(?)
+
+utilize property of hash set (no duplicate and O(1) search)
+
+traversal and check. Main issue here is the 9x9 grid check, with in one i and 0-9 j, we have to traversal one certain 9x9 grid. We derive following table:
+
+| i    | j    | x    | y    |
+| ---- | ---- | ---- | ---- |
+| 0    | 0    | 0    | 0    |
+| 0    | 1    | 1    | 0    |
+| 0    | 2    | 2    | 0    |
+| 0    | 3    | 0    | 1    |
+| 0    | 4    | 1    | 1    |
+| 0    | 5    | 2    | 1    |
+| 0    | 6    | 0    | 2    |
+| 0    | 7    | 1    | 2    |
+| 0    | 8    | 2    | 2    |
+
+With derive equation:
+
+```c++
+x=(i%3)*3+j%3;//(which level in the three left to right levels)+(which level in the three small levels in one big level)
+y=(i/3)*3+j/3;//(which level in the three up to down levels)+(which level in the three small levels in one big level)
+```
+
+![9x9GridDerive](D:\University\leetcode\Leetcode_pratice\day5\9x9GridDerive.png)
+
+##### #73
+
+O(M+N) space complexity method: hold an array with m+n size to store whether ith row/column needs to be set to zero.
+
+O(1) space complexity method: first check whether the first row and column need to be set to zero. Then use the first row and column as the signal array in the O(M+N) method.
