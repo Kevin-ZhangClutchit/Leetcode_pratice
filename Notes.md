@@ -111,7 +111,7 @@ x=(i%3)*3+j%3;//(which level in the three left to right levels)+(which level in 
 y=(i/3)*3+j/3;//(which level in the three up to down levels)+(which level in the three small levels in one big level)
 ```
 
-![9x9GridDerive](D:\University\leetcode\Leetcode_pratice\day5\9x9GridDerive.png)
+![9x9GridDerive](.\day5\9x9GridDerive.png)
 
 ##### #73
 
