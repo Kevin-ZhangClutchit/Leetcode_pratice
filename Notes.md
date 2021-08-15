@@ -118,3 +118,24 @@ y=(i/3)*3+j/3;//(which level in the three up to down levels)+(which level in the
 O(M+N) space complexity method: hold an array with m+n size to store whether ith row/column needs to be set to zero.
 
 O(1) space complexity method: first check whether the first row and column need to be set to zero. Then use the first row and column as the signal array in the O(M+N) method.
+
+#### Day6
+
+##### #387
+
+A relative poor algorithm.
+
+Use map to store the <char, location> information and in the first traversal, when first meet one char, store its first appear location and if met more than once, update the location information to -1 to signal it as invalid.
+
+Then traversal the map by dynamic programming to decide the smallest location.
+
+##### #383
+
+Hash table.
+
+Store <char,appear_times> information into hashtable. When traversal ransomNote, update the appear_times.
+
+##### $=#242
+
+Rely on c++ sort to sort the two strings respectively and then compare whether they are equal.
+
