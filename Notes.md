@@ -135,7 +135,20 @@ Hash table.
 
 Store <char,appear_times> information into hashtable. When traversal ransomNote, update the appear_times.
 
-##### $=#242
+##### #242
 
 Rely on c++ sort to sort the two strings respectively and then compare whether they are equal.
 
+#### Day7
+
+Mainly about Linked list. Not too many notes......
+
+##### #141
+
+use a hash set(store node as value is not unique) to see whether a node has been visited twice.
+
+##### #21 && #203
+
+Recursion
+
+#203  notice to avoid memory leak(Otherwise it can be written in the same form as #21)
