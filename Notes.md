@@ -152,3 +152,15 @@ use a hash set(store node as value is not unique) to see whether a node has been
 Recursion
 
 #203  notice to avoid memory leak(Otherwise it can be written in the same form as #21)
+
+#### Day8
+
+still Linked list......
+
+##### #206
+
+recursion reverse: each time reverse the direction of two connected edges
+
+##### #83
+
+Pay attention to the connection of the prev nodes of the deleted nodes and next nodes of the deleted nodes.(Order before delete node)
