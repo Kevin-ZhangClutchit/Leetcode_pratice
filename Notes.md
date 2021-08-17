@@ -164,3 +164,19 @@ recursion reverse: each time reverse the direction of two connected edges
 ##### #83
 
 Pay attention to the connection of the prev nodes of the deleted nodes and next nodes of the deleted nodes.(Order before delete node)
+
+#### Day9
+
+##### #20
+
+Stack, as what we need to compare is the last input parenthesis, LIFO, which is the property of stack.
+
+Besides, in implementation, to cut off the number of the required if statements, we take advantage of the property of ascii "{"-"}" and "["-"]"==2.
+
+##### #232
+
+Use stack to implement queue.
+
+(FILO)+(LIFO)=(FIFO)
+
+Maintain a push_stack and a pop_stack, unless the pop_stack is empty, we just push the elements into push_stack which indicates their reverse push-in order.
