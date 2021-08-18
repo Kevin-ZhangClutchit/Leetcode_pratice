@@ -180,3 +180,9 @@ Use stack to implement queue.
 (FILO)+(LIFO)=(FIFO)
 
 Maintain a push_stack and a pop_stack, unless the pop_stack is empty, we just push the elements into push_stack which indicates their reverse push-in order.
+
+#### Day10
+
+##### #94 #144 #145
+
+tree traversal. Not too much to say about algorithm. Pay attention to the implementation of passing reference.
