@@ -208,3 +208,20 @@ Repeated steps:
         2. whether the two nodes' value are equivalent
         3. whether the LL(left nodes in the left subtree) and RR nodes are symmetric
         4. whether the LR and RL nodes are symmetric
+
+#### Day12
+
+##### #226
+Recursion.
+Return condition: When the input node is empty node.
+Repeated steps: swap the left and the right children
+
+
+##### #112
+Recursion.
+Return condition: When the input node is empty node or we reach the left node.
+Repeated steps: 
+        Judge following situation: 
+        1. Subtract current node value from the path sum.
+        2. whether the left subtree has the new certain path sum
+        3. whether the right subtree has the new certain path sum
