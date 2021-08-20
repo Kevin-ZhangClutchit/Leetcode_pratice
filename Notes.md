@@ -92,17 +92,17 @@ utilize property of hash set (no duplicate and O(1) search)
 
 traversal and check. Main issue here is the 9x9 grid check, with in one i and 0-9 j, we have to traversal one certain 9x9 grid. We derive following table:
 
-| i    | j    | x    | y    |
-| ---- | ---- | ---- | ---- |
-| 0    | 0    | 0    | 0    |
-| 0    | 1    | 1    | 0    |
-| 0    | 2    | 2    | 0    |
-| 0    | 3    | 0    | 1    |
-| 0    | 4    | 1    | 1    |
-| 0    | 5    | 2    | 1    |
-| 0    | 6    | 0    | 2    |
-| 0    | 7    | 1    | 2    |
-| 0    | 8    | 2    | 2    |
+| i | j | x | y |
+| - | - | - | - |
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 0 | 2 | 2 | 0 |
+| 0 | 3 | 0 | 1 |
+| 0 | 4 | 1 | 1 |
+| 0 | 5 | 2 | 1 |
+| 0 | 6 | 0 | 2 |
+| 0 | 7 | 1 | 2 |
+| 0 | 8 | 2 | 2 |
 
 With derive equation:
 
@@ -190,38 +190,46 @@ tree traversal. Not too much to say about algorithm. Pay attention to the implem
 #### Day11
 
 ##### #102
+
 Example of BFS in VE281 courses. This problem requires one extra requirements of identify which nodes in which level. A trivial idea is to record the size of the queue (the number of nodes after pushing all the children nodes in the previous level)
 
-
 ##### #104
+
 Recursion. Basic binary tree recursion problem. Write a helper to update the depth.
 
-
 ##### #101
+
 Recursion.
 
 Return condition: root node is null pointer. || left node and right node is null pointer.
 
-Repeated steps: 
-        Judge following situation: 
-        1. whether the nodes existence are symmetric
-        2. whether the two nodes' value are equivalent
-        3. whether the LL(left nodes in the left subtree) and RR nodes are symmetric
-        4. whether the LR and RL nodes are symmetric
+Repeated steps:
+Judge following situation:
+1. whether the nodes existence are symmetric
+2. whether the two nodes' value are equivalent
+3. whether the LL(left nodes in the left subtree) and RR nodes are symmetric
+4. whether the LR and RL nodes are symmetric
 
 #### Day12
 
 ##### #226
+
 Recursion.
 Return condition: When the input node is empty node.
 Repeated steps: swap the left and the right children
 
-
 ##### #112
+
 Recursion.
 Return condition: When the input node is empty node or we reach the left node.
-Repeated steps: 
-        Judge following situation: 
-        1. Subtract current node value from the path sum.
-        2. whether the left subtree has the new certain path sum
-        3. whether the right subtree has the new certain path sum
+Repeated steps:
+Judge following situation:
+1. Subtract current node value from the path sum.
+2. whether the left subtree has the new certain path sum
+3. whether the right subtree has the new certain path sum
+
+#### Day13
+
+##### #700 #701
+
+Recursion on the basic concept of BST(Binary Search Tree).
