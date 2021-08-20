@@ -205,6 +205,7 @@ Return condition: root node is null pointer. || left node and right node is null
 
 Repeated steps:
 Judge following situation:
+
 1. whether the nodes existence are symmetric
 2. whether the two nodes' value are equivalent
 3. whether the LL(left nodes in the left subtree) and RR nodes are symmetric
@@ -223,7 +224,7 @@ Repeated steps: swap the left and the right children
 Recursion.
 Return condition: When the input node is empty node or we reach the left node.
 Repeated steps:
-Judge following situation:
+
 1. Subtract current node value from the path sum.
 2. whether the left subtree has the new certain path sum
 3. whether the right subtree has the new certain path sum
@@ -232,4 +233,26 @@ Judge following situation:
 
 ##### #700 #701
 
-Recursion on the basic concept of BST(Binary Search Tree).
+Recursion and the basic concept of BST(Binary Search Tree).
+
+#### Day14
+
+##### #98
+
+Recursion and property of the pre-order traversal of BST.
+
+As learned in VE281, the pre-order traversal of BST is a sequence of number in ascending order which means that during the traversal, if the value of a previous node is larger than the value in the current node, it is not a valid BST.
+
+##### #653
+
+Similar to #1, what is different is that we need to search left and right subtree. (In-order depth first search) As a result, iteration there, recursion here.
+
+##### #235
+
+Recursion.
+Return condition: When the input node is empty node or we reach the left node.
+1. The root node of the tree is empty.
+2. The root node is one of the node in the comparison.
+3. Two nodes are in the different subtree of current root nodes.
+
+Repeated steps: Find which of the subtree two nodes lies in and update the root node.
