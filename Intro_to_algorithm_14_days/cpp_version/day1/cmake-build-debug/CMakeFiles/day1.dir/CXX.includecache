@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/University/leetcode/Leetcode_pratice/Intro_to_algorithm_14_days/cpp_version/day1/main.cpp
+iostream
+-
+vector
+-
+
