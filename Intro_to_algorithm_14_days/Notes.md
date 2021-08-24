@@ -25,3 +25,43 @@ Another attention: Rewrite: (left+right)/2 to left+(right-left)/2 to avoid excee
 ##### #35
 
 Similar to #704, just to modify when left==right, we need to compare whether the inserted value should be in the left or right of the value at the position.
+
+#### Day2
+
+##### #977
+
+A problem occurred in VE281 21SU. From two end of the list (largest and smallest), decide which one is of greater abstract value, push it to the end of the answer vector.(By using vector.resize() to first create space and then assign like an array)
+
+##### #189
+
+simple return situation: reverse times k = 0, nums vector empty or size ==1
+
+Also, to save time, k%=nums.size() is applied to ensure that we at most reverse the vector vector.size()-1 times.
+
+Besides, as vector is treated with size_t. Pay attention to its unsigned property when dealing with size_t - 1.
+
+###### Method 1: Insert at the head
+
+Meet with time exceed issues on Leetcode.
+
+Each time, insert the last elements in the vector to the head of the vector. Then Remove it and update k.
+
+###### Method 2: Triple Reverse
+
+Learn from comments.
+
+For example, 1 2 3 4 5 with k=3, results are 3 4 5 1 2. 
+
+It can be treat as a 3-times reverse:
+
+- First, reverse the whole vector to 5 4 3 2 1.
+- Then, two reverses are carried out on the sub array 5 4 3 and 2 1.
+
+So the algorithm is as:
+
+```C++
+Reverse(vec,0,vec.size()-1);
+Reverse(vec,0,k-1);//After k reverses, k new elements exist at the beginning.
+Reverse(vec,k,vec.size()-1);
+```
+
