@@ -1,4 +1,4 @@
-Notes for Leetcode
+## Notes for Data Structure Basic
 
 #### Day1
 
@@ -111,7 +111,7 @@ x=(i%3)*3+j%3;//(which level in the three left to right levels)+(which level in 
 y=(i/3)*3+j/3;//(which level in the three up to down levels)+(which level in the three small levels in one big level)
 ```
 
-![9x9GridDerive](https://github.com/Kevin-ZhangClutchit/Leetcode_pratice/raw/main/day5/9x9GridDerive.png)
+![9x9GridDerive](https://raw.githubusercontent.com/Kevin-ZhangClutchit/Leetcode_pratice/main/Data_structure_basic_14_days/cpp_version/day5/9x9GridDerive.png)
 
 ##### #73
 
