@@ -50,7 +50,7 @@ Each time, insert the last elements in the vector to the head of the vector. The
 
 Learn from comments.
 
-For example, 1 2 3 4 5 with k=3, results are 3 4 5 1 2. 
+For example, 1 2 3 4 5 with k=3, results are 3 4 5 1 2.
 
 It can be treat as a 3-times reverse:
 
@@ -64,4 +64,25 @@ Reverse(vec,0,vec.size()-1);
 Reverse(vec,0,k-1);//After k reverses, k new elements exist at the beginning.
 Reverse(vec,k,vec.size()-1);
 ```
+
+#### Day3
+
+##### #283
+
+A duplicate problem, notes seen the link below:
+
+[Notes for Move Zeros](https://github.com/Kevin-ZhangClutchit/Leetcode_pratice/blob/main/Data_structure_basic_14_days/Notes.md#283)
+
+##### #167
+
+Double pointers
+
+Basic idea:
+
+- As the array is sorted, we hold a head pointer (the smallest element to be selected) and a tail pointer(the biggest element to be selected).
+- If the head value + tail value > target, which means the tail value is too large, we decrease it.
+- If the head value + tail value < target, which means the head value is too small, we increase it.
+- If the head value + tail value == target (as ensured by the problem), we insert head index + 1 and tail index +1 to the vector.
+
+
 
