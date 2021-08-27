@@ -54,7 +54,7 @@ First, to save memory as Hashtable is quite space consuming. We store the one wi
 
 Then traversal the other vector, and update the frequency and push the one exists in both vectors to the answer vector.
 
-#121
+##### #121
 
 Dynamic Programming
 

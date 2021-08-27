@@ -3,7 +3,7 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-
+//#566
 vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
     int m=mat.size();
     int n=mat[0].size();
@@ -16,7 +16,7 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
     }
     return answer;
 }
-
+//#118
 vector<vector<int>> generate(int numRows) {
     vector<vector<int>> result(1, vector<int>(1, 1));
     if(numRows==1){

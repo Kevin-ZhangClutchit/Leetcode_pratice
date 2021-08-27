@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+//#1
 vector<int> twoSum(vector<int>& nums, int target) {
     unordered_map<int,int> hash;
     vector<int> answer;
@@ -22,7 +22,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return answer;
 
 }
-
+//#88
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
     if (n==0){return;}
     if (m==0){nums1=nums2;return;}
@@ -43,6 +43,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         return;
     }
 }
+//#283
 static bool compare (const int &a, const int &b){
     if (b==0){return true;}
     else {return false;}

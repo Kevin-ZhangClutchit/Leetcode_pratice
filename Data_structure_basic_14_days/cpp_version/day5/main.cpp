@@ -2,7 +2,7 @@
 #include <vector>
 #include <unordered_set>
 using namespace std;
-
+//#36
 bool isValidSudoku(vector<vector<char>>& board) {
     for (int i = 0; i < board.size(); ++i) {
         unordered_set<char> row_check;
@@ -30,6 +30,8 @@ bool isValidSudoku(vector<vector<char>>& board) {
     }
     return true;
 }
+
+//#73
 //O(M+N)
 void setZeroes(vector<vector<int>>& matrix) {
     int m=matrix.size();

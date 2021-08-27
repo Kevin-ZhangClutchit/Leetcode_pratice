@@ -2,7 +2,7 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-
+//#217
 bool containsDuplicate(vector<int>& nums){
     std::unordered_map<int,int> hash;
     for (int i = 0; i < nums.size(); ++i) {
@@ -14,7 +14,7 @@ bool containsDuplicate(vector<int>& nums){
         }
     return false;
 }
-
+//#53
 int maxSubArray2(vector<int>& nums) {
     int partial_sum=0;
     int prev_best=0;

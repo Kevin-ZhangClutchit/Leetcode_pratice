@@ -4,7 +4,7 @@
 
 
 using namespace std;
-
+//#350
  vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
      //first decide which vector is smaller, store it in the hashtable
      unordered_map<int,int> hash;//<number,frequency>
@@ -43,7 +43,7 @@ using namespace std;
 
 
     }
-
+//#121
 int maxProfit(vector<int>& prices) {
      int max_prev_profit=0;
      int min_prev_cost=prices[0];
