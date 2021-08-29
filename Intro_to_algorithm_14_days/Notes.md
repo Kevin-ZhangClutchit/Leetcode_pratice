@@ -84,5 +84,13 @@ Basic idea:
 - If the head value + tail value < target, which means the head value is too small, we increase it.
 - If the head value + tail value == target (as ensured by the problem), we insert head index + 1 and tail index +1 to the vector.
 
+#### Day4
 
+##### #344
+
+Swap according to the size is whether an odd or even number.
+
+##### #557
+
+detect space then #344
 
