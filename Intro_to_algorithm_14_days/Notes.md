@@ -94,3 +94,24 @@ Swap according to the size is whether an odd or even number.
 
 detect space then #344
 
+#### Day5
+
+Both fast pointers and slow pointers in linked list.
+
+##### #876 Middle of the Linked List
+
+An easier version of #19, set the ahead_steps to 1 and no need of slow_pre (as no deletion).
+
+##### #19 Remove Nth Node From End of List
+
+We hold 3 pointers:
+
+- slow_pre: the pointer before the slow pointers (to achieve delete) (Initial nullptr)
+- slow: the pointer to be deleted (Initial head)
+- fast: the pointer used to signal the end of the linked list (Initial head)
+
+Set the ahead_steps to be equal to n and update fast pointers to be ahead of such steps to slow.
+
+While fast pointers is not nullptr, update slow_pre, slow and fast.
+
+When jumping out of the pre loop, if slow_pre is nullptr which signals the head is need to be deleted, we set head=head->next and delete slow (which is past head), else we set slow_pre->next=slow->next and delete slow.
