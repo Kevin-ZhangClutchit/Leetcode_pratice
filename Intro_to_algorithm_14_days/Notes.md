@@ -4,13 +4,13 @@
 
 #### Day1
 
-##### #704
+##### #704 Binary Search
 
 Binary Search
 
 Pay attention to the vector.size() return is size_t (unsigned long long int), so that when dealing with size==0, we should pay extra attention
 
-##### #278
+##### #278 First Bad Version
 
 Binary Search
 
@@ -22,17 +22,17 @@ Update until left==right (which is when the dividing point).
 
 Another attention: Rewrite: (left+right)/2 to left+(right-left)/2 to avoid exceed the upper bound of int.
 
-##### #35
+##### #35 Search Insert Position
 
 Similar to #704, just to modify when left==right, we need to compare whether the inserted value should be in the left or right of the value at the position.
 
 #### Day2
 
-##### #977
+##### #977 Squares of a Sorted Array
 
 A problem occurred in VE281 21SU. From two end of the list (largest and smallest), decide which one is of greater abstract value, push it to the end of the answer vector.(By using vector.resize() to first create space and then assign like an array)
 
-##### #189
+##### #189 Rotate Array
 
 simple return situation: reverse times k = 0, nums vector empty or size ==1
 
@@ -67,13 +67,13 @@ Reverse(vec,k,vec.size()-1);
 
 #### Day3
 
-##### #283
+##### #283 Move Zeroes
 
 A duplicate problem, notes seen the link below:
 
-[Notes for Move Zeros](https://github.com/Kevin-ZhangClutchit/Leetcode_pratice/blob/main/Data_structure_basic_14_days/Notes.md#283)
+[Notes for Move Zeroes](https://github.com/Kevin-ZhangClutchit/Leetcode_pratice/blob/main/Data_structure_basic_14_days/Notes.md#283)
 
-##### #167
+##### #167 Two Sum II - Input array is sorted
 
 Double pointers
 
@@ -86,11 +86,11 @@ Basic idea:
 
 #### Day4
 
-##### #344
+##### #344 Reverse String
 
 Swap according to the size is whether an odd or even number.
 
-##### #557
+##### #557 Reverse Words in a String III
 
 detect space then #344
 
