@@ -2,13 +2,13 @@
 
 #### Day1
 
-##### #217
+##### #217 Contains Duplicate
 
 Property of Hash table. O(n) for one traversal of the input and O(1) for insert and search in hash table.
 
 One element is not in hash table then insert it. If it has been in then return true. After one traversal, return false.
 
-##### #53
+##### #53 Maximum Subarray
 
 Dynamic Programming.
 
@@ -20,7 +20,7 @@ When we have a negative or zero partial sum, which means the previous sequence d
 
 #### Day2
 
-##### #1
+##### #1 Two Sum
 
 Property of Hash table.(My method)
 
@@ -28,7 +28,7 @@ Previous I think a 2*O(n) algorithm but a better way is in O(n)  hinted by comme
 
 During the traversal, we keep find whether (sum - current) has been stored in a hash table(utilize the O(1) search of hash table), if not, insert it to the hash table as (number,location) pair(using number as key to search for location). If yes, push current location and hashtable[sum-current value] to the answer vector.(utilize O(1) search and get of hash table).
 
-##### #88
+##### #88 Merge Sorted Array
 
 From back to front insertion due to the empty space exists at the last of nums1 vector.
 
@@ -36,7 +36,7 @@ Utilize a trick of shift from number of elements remaining and position in one v
 
 Each time, at the current last position, insert the largest element of nums1 and nums2 last as they have been already sorted. Somehow like a reverse version of the merge in the merge sort.
 
-##### #283
+##### #283 Move Zeroes
 
 cpp 17(?) new feature stable_sort with personalized comp.
 
@@ -46,7 +46,7 @@ std::stable_sort is like merge sort provided by cpp17 and rewrite the comp to me
 
 #### Day3
 
-##### #350
+##### #350 Intersection of Two Arrays II
 
 Hashtable
 
@@ -54,7 +54,7 @@ First, to save memory as Hashtable is quite space consuming. We store the one wi
 
 Then traversal the other vector, and update the frequency and push the one exists in both vectors to the answer vector.
 
-##### #121
+##### #121 Best Time to Buy and Sell Stock
 
 Dynamic Programming
 
@@ -64,17 +64,17 @@ Each time, first updates (2) and then compare (sell today - (2)) with (1) and up
 
 #### Day4
 
-##### #566
+##### #566 Reshape the matrix
 
 Treat the matrix as an array then arrange the array into m\*n and r\*c matrixs
 
-##### #118
+##### #118 Pascal's Triangle
 
 Dynamic Programming
 
 store the before rows result and what we need to do is like fib that we add the left and right predecessor of current position.
 
-##### #1170
+##### #1170 Compare Strings by Frequency of the Smallest  Character
 
 How to calculate frequency: utilize the sort function provided by cpp STL which is also available for string then count the first n (duplicate) elements number.
 
@@ -84,7 +84,7 @@ Note 11 in my code is to ensure that 1-10 (length limitations given by the probl
 
 #### Day5
 
-##### #36
+##### #36 Valid Sudoku
 
 Dynamic Programming(?)
 
@@ -113,7 +113,7 @@ y=(i/3)*3+j/3;//(which level in the three up to down levels)+(which level in the
 
 ![9x9GridDerive](https://raw.githubusercontent.com/Kevin-ZhangClutchit/Leetcode_pratice/main/Data_structure_basic_14_days/cpp_version/day5/9x9GridDerive.png)
 
-##### #73
+##### #73 Set Matrix Zeroes
 
 O(M+N) space complexity method: hold an array with m+n size to store whether ith row/column needs to be set to zero.
 
@@ -121,7 +121,7 @@ O(1) space complexity method: first check whether the first row and column need 
 
 #### Day6
 
-##### #387
+##### #387 First Unique Character in a String
 
 A relative poor algorithm.
 
@@ -129,13 +129,13 @@ Use map to store the <char, location> information and in the first traversal, wh
 
 Then traversal the map by dynamic programming to decide the smallest location.
 
-##### #383
+##### #383 Ransom Note
 
 Hash table.
 
 Store <char,appear_times> information into hashtable. When traversal ransomNote, update the appear_times.
 
-##### #242
+##### #242 Valid Anagram
 
 Rely on c++ sort to sort the two strings respectively and then compare whether they are equal.
 
@@ -143,11 +143,11 @@ Rely on c++ sort to sort the two strings respectively and then compare whether t
 
 Mainly about Linked list. Not too many notes......
 
-##### #141
+##### #141 Linked List Cycle
 
 use a hash set(store node as value is not unique) to see whether a node has been visited twice.
 
-##### #21 && #203
+##### #21 Merge Two Sorted Lists && #203 Remove Linked List Elements
 
 Recursion
 
@@ -157,23 +157,23 @@ Recursion
 
 still Linked list......
 
-##### #206
+##### #206 Reverse Linked List
 
 recursion reverse: each time reverse the direction of two connected edges
 
-##### #83
+##### #83 Remove Duplicates from Sorted List
 
 Pay attention to the connection of the prev nodes of the deleted nodes and next nodes of the deleted nodes.(Order before delete node)
 
 #### Day9
 
-##### #20
+##### #20 Valid Parentheses
 
 Stack, as what we need to compare is the last input parenthesis, LIFO, which is the property of stack.
 
 Besides, in implementation, to cut off the number of the required if statements, we take advantage of the property of ascii "{"-"}" and "["-"]"==2.
 
-##### #232
+##### #232 Implement Queue using Stacks
 
 Use stack to implement queue.
 
@@ -183,21 +183,21 @@ Maintain a push_stack and a pop_stack, unless the pop_stack is empty, we just pu
 
 #### Day10
 
-##### #94 #144 #145
+##### #94 #144 #145 Binary Tree Inorder/Preorder/Postorder Traversal
 
 tree traversal. Not too much to say about algorithm. Pay attention to the implementation of passing reference.
 
 #### Day11
 
-##### #102
+##### #102 Binary Tree Level Order Traversal
 
 Example of BFS in VE281 courses. This problem requires one extra requirements of identify which nodes in which level. A trivial idea is to record the size of the queue (the number of nodes after pushing all the children nodes in the previous level)
 
-##### #104
+##### #104 Maximum Depth of Binary Tree
 
 Recursion. Basic binary tree recursion problem. Write a helper to update the depth.
 
-##### #101
+##### #101 Symmetric Tree
 
 Recursion.
 
@@ -213,13 +213,13 @@ Judge following situation:
 
 #### Day12
 
-##### #226
+##### #226 Invert Binary Tree
 
 Recursion.
 Return condition: When the input node is empty node.
 Repeated steps: swap the left and the right children
 
-##### #112
+##### #112 Path Sum
 
 Recursion.
 Return condition: When the input node is empty node or we reach the left node.
@@ -231,26 +231,27 @@ Repeated steps:
 
 #### Day13
 
-##### #700 #701
+##### #700 Search in a Binary Search Tree #701 Insert into a Binary Search Tree
 
 Recursion and the basic concept of BST(Binary Search Tree).
 
 #### Day14
 
-##### #98
+##### #98 Validate Binary Search Tree
 
 Recursion and property of the pre-order traversal of BST.
 
 As learned in VE281, the pre-order traversal of BST is a sequence of number in ascending order which means that during the traversal, if the value of a previous node is larger than the value in the current node, it is not a valid BST.
 
-##### #653
+##### #653 Two Sum IV - Input is a BST
 
 Similar to #1, what is different is that we need to search left and right subtree. (In-order depth first search) As a result, iteration there, recursion here.
 
-##### #235
+##### #235 Lowest Common Ancestor of a Binary Search Tree
 
 Recursion.
 Return condition: When the input node is empty node or we reach the left node.
+
 1. The root node of the tree is empty.
 2. The root node is one of the node in the comparison.
 3. Two nodes are in the different subtree of current root nodes.
