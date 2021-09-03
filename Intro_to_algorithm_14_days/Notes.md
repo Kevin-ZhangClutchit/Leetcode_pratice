@@ -115,3 +115,24 @@ Set the ahead_steps to be equal to n and update fast pointers to be ahead of suc
 While fast pointers is not nullptr, update slow_pre, slow and fast.
 
 When jumping out of the pre loop, if slow_pre is nullptr which signals the head is need to be deleted, we set head=head->next and delete slow (which is past head), else we set slow_pre->next=slow->next and delete slow.
+
+#### Day6
+
+##### #3 Longest Substring Without Repeating Characters
+
+Sliding windows. Hold two pointers, left and right (Both initially at the begin). 
+
+- While right doesn't reach the end of the string, update the right until meet a substring with repeating character.
+
+- Update the best result so far. 
+
+- Increase the left pointer and repeat the loops.
+
+
+##### #567 Permutation in String
+
+Sliding windows. Hold two unorder_map: one is to store the information of s1, the other is update during each windows to judge whether permutation exists.
+
+Set the left and right to be of a distance as the size of s1. 
+
+Each time, compare whether the substring given by the [left,right] is of the same characters composition as s1. Then increase both left and right until the right reaches the end of the string.
