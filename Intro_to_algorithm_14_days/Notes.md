@@ -120,19 +120,32 @@ When jumping out of the pre loop, if slow_pre is nullptr which signals the head 
 
 ##### #3 Longest Substring Without Repeating Characters
 
-Sliding windows. Hold two pointers, left and right (Both initially at the begin). 
+Sliding windows. Hold two pointers, left and right (Both initially at the begin).
 
 - While right doesn't reach the end of the string, update the right until meet a substring with repeating character.
-
-- Update the best result so far. 
-
+- Update the best result so far.
 - Increase the left pointer and repeat the loops.
-
 
 ##### #567 Permutation in String
 
-Sliding windows. Hold two unorder_map: one is to store the information of s1, the other is update during each windows to judge whether permutation exists.
+Sliding windows. Hold two unorder_maps: one is to store the information of s1, the other is update during each windows to judge whether permutation exists.
 
-Set the left and right to be of a distance as the size of s1. 
+Set the left and right to be of a distance as the size of s1.
 
 Each time, compare whether the substring given by the [left,right] is of the same characters composition as s1. Then increase both left and right until the right reaches the end of the string.
+
+#### Day7
+
+##### #733 Flood Fill
+
+Depth First Search.
+
+If current_color == new_color, end the loop to avoid no return.
+
+Else, starting from the target point, judge whether the boundary has been reached && whether the adjacent grid is of different colors.
+
+##### #695 Max Area of Island
+
+Depth First Search.
+
+Traversal the grid, once meet an island, update all the islands grid reached by DFS to 0 and calculate the area.
