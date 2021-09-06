@@ -149,3 +149,23 @@ Else, starting from the target point, judge whether the boundary has been reache
 Depth First Search.
 
 Traversal the grid, once meet an island, update all the islands grid reached by DFS to 0 and calculate the area.
+
+#### Day8
+
+##### #617 Merge Two Binary Trees
+
+Recursion.(DFS)
+
+Merge the root node and then merge the left node, right node respectively.
+
+##### #116 Populating Next Right Pointers in Each Node
+
+As initially all next pointers are nullptr, we don't need to consider the next node of the right-most nodes in every level. Besides, as it is a perfect binary tree, all nodes can be connected together through its parent-level nodes(excluding the root node).
+
+- Connect two sub-nodes.
+
+- Connect right sub-node to the sibling's left node if necessary.
+
+- Connect left subtree.
+
+- Connect right subtree.
