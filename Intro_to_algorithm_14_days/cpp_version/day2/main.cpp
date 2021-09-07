@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-//#977
+//#977 Squares of a Sorted Array
 vector<int> sortedSquares(vector<int>& nums) {
     vector<int> answer;
     if (nums.empty()){return answer;}
@@ -29,7 +29,7 @@ vector<int> sortedSquares(vector<int>& nums) {
     }
 
 }
-//#189
+//#189 Rotate Array
 // Triple Reverse~
 void reverse(vector<int>& nums,size_t begin,size_t end){
     if (nums.empty()||nums.size()==1||begin==end){

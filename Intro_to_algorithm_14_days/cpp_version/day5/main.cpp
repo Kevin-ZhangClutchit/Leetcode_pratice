@@ -11,7 +11,7 @@ struct ListNode {
          ListNode(int x, ListNode *next) : val(x), next(next) {}
      };
 
-//#876
+//#876 Middle of the Linked List
 ListNode* middleNode(ListNode* head) {
     if (head== nullptr){return head;}
     else{
@@ -25,7 +25,7 @@ ListNode* middleNode(ListNode* head) {
     }
 }
 
-//#19
+//#19 Remove Nth Node From End of List
 ListNode* removeNthFromEnd(ListNode* head, int n) {
     if (head== nullptr){return head;}
     else if (head->next== nullptr){return nullptr;}

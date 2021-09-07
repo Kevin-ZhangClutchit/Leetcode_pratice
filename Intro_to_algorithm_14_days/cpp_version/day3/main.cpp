@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//#283
+//#283 Move Zeroes
 static bool compare (const int &a, const int &b){
     if (b==0){return true;}
     else {return false;}
@@ -14,7 +14,7 @@ void moveZeroes(vector<int>& nums) {
     std::stable_sort(nums.begin(),nums.end(),compare);
 }
 
-//#167
+//#167 Two Sum II - Input array is sorted
 vector<int> twoSum(vector<int>& numbers, int target) {
     vector<int> answer;
     if (numbers.size()==2){answer={1,2};}

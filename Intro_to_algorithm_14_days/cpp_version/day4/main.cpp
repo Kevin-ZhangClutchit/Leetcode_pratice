@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-//#344
+//#344 Reverse String
 void reverseString(vector<char>& s) {
     std::size_t string_size=s.size();
     if(string_size==0||string_size==1){
@@ -24,7 +24,7 @@ void reverseString(vector<char>& s) {
 }
 
 
-//#557
+//#557 Reverse Words in a String III
 
 string reverseWords(string s) {
     if (s.empty()||s.size()==1){

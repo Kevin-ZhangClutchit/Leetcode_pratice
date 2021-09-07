@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-//#704
+//#704 Binary Search
 int search(vector<int>& nums, int target) {
     if (nums.empty()){
         return -1;
@@ -25,7 +25,7 @@ int search(vector<int>& nums, int target) {
     return -1;
 }
 
-//#278
+//#278 First Bad Version
 static const int answer=4;
 bool isBadVersion(int version){
     return version <= answer;
@@ -43,7 +43,7 @@ int firstBadVersion(int n) {
     }
     return left;
 }
-//#35
+//#35 Search Insert Position
 int searchInsert(vector<int>& nums, int target)  {
     if (nums.empty()){
         return 0;
