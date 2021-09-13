@@ -162,10 +162,21 @@ Merge the root node and then merge the left node, right node respectively.
 
 As initially all next pointers are nullptr, we don't need to consider the next node of the right-most nodes in every level. Besides, as it is a perfect binary tree, all nodes can be connected together through its parent-level nodes(excluding the root node).
 
-- Connect two sub-nodes.
+* Connect two sub-nodes.
+* Connect right sub-node to the sibling's left node if necessary.
+* Connect left subtree.
+* Connect right subtree.
 
-- Connect right sub-node to the sibling's left node if necessary.
+#### Day9
 
-- Connect left subtree.
+##### #542 01 Matrix
 
-- Connect right subtree.
+BFS with multi-source, somehow likes #102.
+
+We record the one with initial value 0 as level 0 nodes then detect whether their children (adjacent nodes in four directions) are 1, if so update its value as 0 and set it to level 1. Repeat such steps until the queue is empty.
+
+##### #994 Rotting Oranges
+
+Little bit complex version of #542.
+
+In the first traversal to record the source (rotten oranges), we also record the number of fresh oranges as long as all fresh oranges are rotten, we return. Besides this, it is the same as #542.
